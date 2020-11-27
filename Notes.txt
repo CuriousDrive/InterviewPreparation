@@ -1,0 +1,20 @@
+------------ Preparing for C# ineterview ---------
+
+Data Structures =>
+
+1. Strings
+2. Array
+
+Operators =>
+
+Logics =>
+
+1. Reverse the string
+2. Find odd numbers in array
+3. Sort the string
+4. Convert binary array to int
+5. Capitalize the chars
+6. Replacing chars
+
+OOPs Fundamentals =>
+
