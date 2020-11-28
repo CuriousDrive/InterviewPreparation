@@ -5,10 +5,46 @@ using System.Linq;
 
 namespace CSharpBasics
 {
+
+    class Student
+    {
+        public string Name { get; set; }
+        public int Score { get; set; }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
+            string[] names1 = new[] { "Fahad", "Adam", "Mullaji" };
+            string[] names2 = new[] { "Monica", "Kendra", "Mullaji" };
+            int[] numbers = { 11, 12, 13, 14, 15};
+
+            Student[] students = {  new Student() { Score = 10, Name = "Fahad"} ,
+                                    new Student() { Score = 20, Name = "Monica"},
+                                    new Student() { Score = 20, Name = "Joe"}};
+
+            //-------------------- DICTIONARY --------------------
+
+
+
+            //-------------------- SORTED LIST --------------------
+            //let's try with numbers first
+            //not sure when I can use this why not just sort the existing list?
+            //SortedList sortedList = new SortedList();
+            //int index = 0;
+            //for(int i = numbers.Length-1; i >= 0; i--)
+            //{
+            //    sortedList.Add(i,numbers[index]);
+            //    index++;
+            //}
+
+            //foreach (var item in sortedList)
+            //{
+            //    DictionaryEntry dictionaryEntry = (DictionaryEntry)item;
+            //    Console.WriteLine(dictionaryEntry.Key + " " + dictionaryEntry.Value);
+            //}
+
             //-------------------- ARRAY LIST --------------------
             // array list is like array but array list is dynamic
             // you can add and remove items from the list
@@ -61,12 +97,9 @@ namespace CSharpBasics
                 List<T> performs faster and less error-prone than the ArrayList.
             */
 
-            string[] names1 = new[] { "Fahad", "Adam", "Mullaji" };
-            string[] names2 = new[] { "Monica", "Kendra", "Mullaji" };
-
-            var names = new List<string>();
-            names.AddRange(names1);
-            names.AddRange(names2);
+            //var names = new List<string>();
+            //names.AddRange(names1);
+            //names.AddRange(names2);
 
             //addrange strings
             //names.ForEach(name => Console.WriteLine(name);
@@ -88,10 +121,6 @@ namespace CSharpBasics
 
             //names.Sort();
             //names.ForEach(name => Console.WriteLine(name));
-
-
-            /*  -------------------- SORTED LIST<T> --------------------*/
-
 
         }
     }

@@ -20,3 +20,9 @@
 /LINQ/obj
 /Strings/.vs/CSharpBasics
 /Strings/.vscode
+/LINQ/bin/Debug/netcoreapp3.1
+/DataStructures/.vs
+/DataStructures/bin/Debug/netcoreapp3.1
+/DataStructures/obj/Debug/netcoreapp3.1
+/DataStructures/obj/Release/netcoreapp3.1
+/DataStructures/obj

@@ -8,10 +8,40 @@ namespace CSharpBasics
     {
         static void Main(string[] args)
         {
-            int[] intArray = { 1, 2, 3, 4, 5 , 5, 4, 3};
-            int[] intArray2 = { 1, 2, 3, 4, 5 , 5, 4, 3};
-            string[] strArray = { "Pune", "Chiplun", "Hyderabad", "Topeka", "Columbia", "Philadelphia" };
-            Student[] students = { new Student() { Score = 10, Name = "Fahad"} , new Student() { Score = 20, Name = "Monica" } };
+            int[] intArray = {1,2,3,4,5,5,4,3};
+            int[] intArray2 = {1,1,1,1,1,1,1,1};
+            string[] strArray = { "Chiplun", "Chiplun", "Hyderabad", "Topeka", "Pune", "Pune" };
+            Student[] students = {  new Student() { Score = 10, Name = "Fahad"} , 
+                                    new Student() { Score = 20, Name = "Monica"},
+                                    new Student() { Score = 20, Name = "Joe"}};
+
+            //using group by on string array and sorting it by descending order
+            //var groupedStringArray = strArray.GroupBy(s => s).OrderByDescending(item => item.Count).ToList();
+
+            //foreach(var item in groupedStringArray)
+            //{
+            //    Console.WriteLine(item.Key + " " + item.Count());
+            //}
+            
+            //grouping in custom data types
+            //var groupedStudents = students.GroupBy(s => s.Score).ToList();
+
+            //foreach(var item in groupedStudents)
+            //{
+            //    Console.WriteLine(item.Key);
+            //    foreach(var item2 in item)
+            //    {
+            //        Console.WriteLine(item2.Name + "-" + item2.Score);
+            //    }
+            //}
+
+            //grouping by numbers
+            //var groupedData = intArray2.GroupBy(number => number).ToList();
+
+            //foreach(var item in groupedData)
+            //{
+            //    Console.WriteLine(item.Key + " " + item.Count());
+            //}
 
             //first and last just returns first or last item
             //but single throws exception of it finds duplicate value
