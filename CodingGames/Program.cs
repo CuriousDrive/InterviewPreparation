@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-System.Linq.Enumerable.Range(0, 10).ToList().ForEach(i => { System.Console.WriteLine(i); });
-Console.WriteLine('a'+'b');
+
+var average = Math.Ceiling(new List<int>() { 1, 2, 3, 4 }.Average());
+Console.WriteLine(average);
