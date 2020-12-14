@@ -8,7 +8,44 @@ namespace CSharpBasics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Extract(new int[] { -3, -2, -1, 2, 10, 15, 16, 18, 19, 20 }));
+            Console.WriteLine(FindMostSimilar("heaven"));
+        }
+
+        /*
+         I'm sure, you know Google's "Did you mean ...?", when you entered a search term and mistyped a word. 
+         In this kata we want to implement something similar.
+         */
+
+        public static string FindMostSimilar(string term)
+        {
+            term = new string(term.OrderBy(c => c).ToArray());
+            IEnumerable<string> words = new List<string> { "javascript", "java", "ruby", "php", "python", "coffeescript" };
+            Dictionary<string, int> mathDictionary = new Dictionary<string, int>();
+            words = words.ToList();
+            foreach(var word in words)
+            {
+                mathDictionary.Add(word, 0);
+                
+                string wordToCompare = new string(word.OrderBy(c => c).ToArray());
+                int minValue = Math.Min(wordToCompare.Length, term.Length);
+                for(int j = 0; j < minValue; j++)
+                {
+                    if(wordToCompare[j] == term[j])
+                    {
+                        mathDictionary[word]++;
+                    }
+                }
+            }
+            var value = mathDictionary.OrderByDescending(item => item.Value).ToList();
+            //var value1 = value.OrderBy(item => item.Key.Length).FirstOrDefault();
+            
+            foreach(var item in value)
+            {
+                Console.WriteLine(item.Key + " " + item.Value);
+            }
+
+
+            return "";
         }
 
         /*

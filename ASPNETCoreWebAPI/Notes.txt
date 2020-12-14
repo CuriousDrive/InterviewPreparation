@@ -1,0 +1,19 @@
+﻿Observations of ASP.NET Core Web API => 
+
+Areas to focus on would be the following =>
+
+	1. Creating controller from VS and executing the HTTP methods - Done
+	2. Need to read the both the MS Docs article to understand it's behavior
+	3. Routing is the most important thing in the Web API
+	4. Asynchronous programming => Done
+	5. Create a controller from the scratch and understand the challenges => Done
+	6. Understand how IActionResult works and the return types for the web api => Done
+	7. Also check out the parameter passing for the web api => Done
+
+
+Some notes about ActionResult and IActionResult
+IActionResults are used to send the HTTP status code back to the clietns, so that 
+it is easier for clients to handle those error
+You can use ActionResult<T> to pass your objects with the response
+
+

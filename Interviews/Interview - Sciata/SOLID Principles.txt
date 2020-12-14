@@ -1,0 +1,22 @@
+Single Reponsibility Principle =>
+Creating child classes such a way that we don't have to change one class for everything. The class will be changed only when there is a reason for it change.
+Creating classes for it's responsibility
+
+
+Open/Closed Principle => 
+A class or module is open for extension but closed for modification.
+Creating a interfaces for classes and then injecting the interfaces than the concrete implementation. 
+
+
+Liskov Substitution Principle =>
+Making use of abstract classes. Also I would reprensent this as abstraction in the oops concepts
+
+
+Interface Segregation Principle => 
+You should create an interface for a particular reposibilty. and implement those in your classes.
+this could be refered to as polymorphism in oops concepts
+If you have made more interfaces than classes than you have gone far
+
+
+Dependency Inversion Principle => 
+this is dependency injection in asp.net core. You can create abstractions for you concrete classes so that you can swap them if you needed to upgrade to another service. this helps you decouple the concrete implementation from abtractions
