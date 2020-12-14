@@ -34,3 +34,6 @@
 /ASPNETCoreWebAPI/obj
 /CodeWars/bin/Debug/netcoreapp3.1
 /CodeWars/obj
+/DelegatesDemo/.vs/DelegatesDemo/v16
+/DelegatesDemo/bin/Debug/netcoreapp3.1
+/DelegatesDemo/obj
