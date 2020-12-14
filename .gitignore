@@ -37,3 +37,9 @@
 /DelegatesDemo/.vs/DelegatesDemo/v16
 /DelegatesDemo/bin/Debug/netcoreapp3.1
 /DelegatesDemo/obj
+/DelegatesDemo/.vs/DelegatesDemo/DesignTimeBuild
+/UnitTestingDemo/.vs/UnitTestingDemo/v16
+/UnitTestingDemo/BankTests/bin/Debug/netcoreapp3.1
+/UnitTestingDemo/BankTests/obj
+/UnitTestingDemo/UnitTestingDemo/bin/Debug/netcoreapp3.1
+/UnitTestingDemo/UnitTestingDemo/obj
