@@ -19,14 +19,91 @@ namespace CSharpBasics
             string[] names1 = new[] { "Fahad", "Adam", "Mullaji" };
             string[] names2 = new[] { "Monica", "Kendra", "Mullaji" };
             int[] numbers = { 11, 12, 13, 14, 15};
-
+            string[] stringNumbers = { "11", "12", "13", "14", "15"};
             Student[] students = {  new Student() { Score = 10, Name = "Fahad"} ,
                                     new Student() { Score = 20, Name = "Monica"},
                                     new Student() { Score = 20, Name = "Joe"}};
 
-            //-------------------- DICTIONARY --------------------
+            numbers.ToList().Select(n => n.ToString()).ToList();
+            List<int> intNumbers = stringNumbers.Select(int.Parse).ToList();
+
+            //-------------------- Linked List --------------------
 
 
+            //-------------------- Linked List --------------------
+
+
+            //-------------------- Stack --------------------
+            Stack<string> languages = new Stack<string>();
+            languages.Push("C#");
+            languages.Push("JavaScript");
+            languages.Push("Java");
+            languages.Push("python");
+            languages.Push("SQL");
+
+            //if you try to pop an emty stack then it will throw an exception
+            //Console.WriteLine(languages.Pop());
+            //Console.WriteLine(languages.Pop());
+            //Console.WriteLine(languages.Pop());
+            //Console.WriteLine(languages.Pop());
+            //Console.WriteLine(languages.Pop());
+
+            //this will throw an exception if you try to peek an empty stack
+            //Console.WriteLine(languages.Peek());
+            //Console.WriteLine(languages.Peek());
+            //Console.WriteLine(languages.Peek());
+            //Console.WriteLine(languages.Peek());
+
+            //languages.Prepend("Bash");
+            //Console.WriteLine(languages.Pop());
+            //Console.WriteLine(languages.Pop());
+            //Console.WriteLine(languages.Pop());
+            //Console.WriteLine(languages.Pop());
+            //Console.WriteLine(languages.Pop());
+            //Console.WriteLine(languages.Pop());
+
+            //-------------------- Queue --------------------
+            // => Fahad Mark Monica Tanvi Joe Erin Shayna Moo
+            Queue<string> line = new Queue<string>();
+            //line.Enqueue("Fahad");
+            //line.Enqueue("Mark");
+            ////dequeue method removed the first element in the queue to be removed
+            ////Console.WriteLine(line.Dequeue());
+            //line.Enqueue("Monica");
+            //line.Enqueue("Tanvi");
+            ////Console.WriteLine(line.Dequeue());
+            //line.Enqueue("Erin");
+            //line.Enqueue("Shayna");
+            ////Console.WriteLine(line.Dequeue());
+            //line.Enqueue("Joe");
+            //line.Enqueue("Moo");
+
+            //peek let's you look at the first element but it does not remove the element
+            //Console.WriteLine(line.Peek());
+            //Console.WriteLine(line.Peek());
+            //Console.WriteLine(line.Peek());
+
+            //if tried to dequeue when there are no items then you will get an exception
+            //Console.WriteLine(line.Dequeue());
+
+            //you can use TryDequeue to check if there any items left or not 
+            //string result = "";
+            //Console.WriteLine(line.TryDequeue(out result));
+            //Console.WriteLine(result);
+
+            //if tried to Peek when there are no items then you will get an exception
+            //Console.WriteLine(line.Peek());
+
+            //you can use TryPeek to check if there any items left or not 
+            //string result = "";
+            //Console.WriteLine(line.TryPeek(out result));
+            //Console.WriteLine(result);
+
+            //count of items
+            //Console.WriteLine(line.Count());
+
+            //you can convert your queue into a list and work on it
+            //line.ToList().ForEach(s => Console.WriteLine(s));
 
             //-------------------- SORTED LIST --------------------
             //let's try with numbers first
