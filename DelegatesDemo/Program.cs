@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DelegatesDemo
 {
@@ -38,6 +40,10 @@ namespace DelegatesDemo
 
             //add(10,20);multiply(10, 24);substract(10, 12);divide(11, 11);
 
+            //predicate
+            Predicate<int> predicate = (number) => { return number > 20 ? true : false; };
+            List<string> numbers = new List<string> { "10", "20", "5" };
+            Console.WriteLine(String.Join(" ",numbers.Select(int.Parse).ToList().FindAll(predicate).ToArray()));
         }
     }
 }

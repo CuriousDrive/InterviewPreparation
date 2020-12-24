@@ -48,3 +48,13 @@
 /UnitTestingDemo/.vs/UnitTestingDemo/DesignTimeBuild
 /AsyncAwaitDemo/bin/Debug/netcoreapp3.1
 /AsyncAwaitDemo/.vs/AsyncAwaitDemo/DesignTimeBuild
+/.vs
+/CodinGames/.vs/CodinGames
+/CodinGames/bin/Debug/netcoreapp3.1
+/CodinGames/obj
+/Fundamentals/obj/Debug/netcoreapp3.1
+/Fundamentals/obj/Release/netcoreapp3.1
+/Interviews/Interview - WayFair/obj/Debug/netcoreapp3.1
+/Interviews/Interview - WayFair/obj/Release/netcoreapp3.1
+/Strings/obj/Debug/netcoreapp3.1
+/Strings/obj/Release/netcoreapp3.1
