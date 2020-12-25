@@ -4,7 +4,7 @@ namespace TestDomePractice
 {
     class Program
     {
-        static void Main(string[] args)
+        static void MainDoNoCall(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
