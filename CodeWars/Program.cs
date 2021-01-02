@@ -8,8 +8,59 @@ namespace CSharpBasics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(FindMostSimilar("heaven"));
+            Console.WriteLine(formatDuration(33243586));
         }
+
+        /*
+            Your task in order to complete this Kata is to write a function which formats a duration, 
+            given as a number of seconds, in a human-friendly way.
+         */
+        public static string formatDuration(int seconds)
+        {
+            TimeSpan timeSpan = TimeSpan.FromSeconds(seconds);
+
+            string result = "";
+            result += Math.Floor(timeSpan.TotalDays/365) > 0 
+                        ? Math.Floor(timeSpan.TotalDays / 365).ToString() 
+                            + " year" + ((Math.Floor(timeSpan.TotalDays / 365) > 1) ? "s" : "")
+                        : "";
+            result += " ";
+            result += Math.Floor(timeSpan.TotalDays%365) > 0
+                        ? Math.Floor(timeSpan.TotalDays % 365).ToString()
+                            + " day" + ((Math.Floor(timeSpan.TotalDays % 365) > 1) ? "s" : "")
+                        : "";
+            result += " ";
+            result += Math.Floor(timeSpan.TotalHours % 60) > 0
+                        ? Math.Floor(timeSpan.TotalHours % 60).ToString()
+                            + " hour" + ((Math.Floor(timeSpan.TotalHours % 60) > 1) ? "s" : "")
+                        : "";
+            result += " ";
+            result += Math.Floor(timeSpan.TotalMinutes % 60) > 0
+                        ? Math.Floor(timeSpan.TotalMinutes % 60).ToString()
+                            + " minute" + ((Math.Floor(timeSpan.TotalMinutes % 60) > 1) ? "s" : "")
+                        : "";
+            result += " and ";
+            result += Math.Floor(timeSpan.TotalSeconds % 60) > 0
+                        ? Math.Floor(timeSpan.TotalSeconds % 60).ToString()
+                            + " second" + ((Math.Floor(timeSpan.TotalSeconds % 60) > 1) ? "s" : "")
+                        : "";
+            return result;
+        }
+
+
+        /*
+            Complete the function that
+            accepts two integer arrays of equal length
+            compares the value each member in one array to the corresponding member in the other
+            squares the absolute value difference between those two values
+            and returns the average of those squared absolute value difference between each member pair.
+         */
+        public static double Solution(int[] firstArray, int[] secondArray)
+        {
+            return firstArray.ToList().Select((value,index) => Math.Pow((firstArray[index] - secondArray[index]), 2)).ToList().Average();
+        }
+
+        public static double Solution2(int[] xs, int[] ys) => xs.Zip(ys, (x, y) => (x - y) * (x - y)).Average();
 
         /*
          I'm sure, you know Google's "Did you mean ...?", when you entered a search term and mistyped a word. 
@@ -186,7 +237,6 @@ namespace CSharpBasics
             return true;
         }
 
-
         /*
             Given the string representations of two integers, 
             return the string representation of the sum of those integers.
@@ -196,7 +246,6 @@ namespace CSharpBasics
         {
             return (Convert.ToDecimal(a) + Convert.ToDecimal(b)).ToString();
         }
-
 
         /*
             Write a program that will calculate the number of trailing zeros in a factorial of a given number.
@@ -367,13 +416,11 @@ namespace CSharpBasics
          Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
          If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
          */
-
         public static string Order(string words)
         {
             if (string.IsNullOrEmpty(words)) return words;
             return string.Join(" ", words.Split(' ').OrderBy(s => s.ToList().Find(c => char.IsDigit(c))));
         }
-
 
         public static string Order1(string words)
         {
@@ -409,7 +456,6 @@ namespace CSharpBasics
          If anything in the text isn't a letter, ignore it and don't return it.
          "a" = 1, "b" = 2, etc.
          */
-
         public static string AlphabetPosition(string text)
         {
             return string.Join(" ", text.ToLower()
@@ -439,7 +485,6 @@ namespace CSharpBasics
 
             return result;
         }
-
         /*
           Write a function that takes an integer as input, 
           and returns the number of bits that are equal to one in the 
@@ -461,7 +506,6 @@ namespace CSharpBasics
          uniqueInOrder("ABBCcAD")         == {'A', 'B', 'C', 'c', 'A', 'D'}
          uniqueInOrder([1,2,2,3,3])       == {1,2,3}
          */
-
         public static IEnumerable<T> UniqueInOrder<T>(IEnumerable<T> iterable)
         {
             //your code here...
@@ -483,7 +527,6 @@ namespace CSharpBasics
 
             return uniqueInOrder;
         }
-
 
         /*
          The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
@@ -507,7 +550,7 @@ namespace CSharpBasics
             }
             return sum;
         }
-
+        
         /*
          Given a string of words, you need to find the highest scoring word.
         Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
@@ -520,7 +563,6 @@ namespace CSharpBasics
             char[] charArray = s.ToCharArray();
             return charArray.OrderByDescending(c => c).ToString();
         }
-
         /*
          he number 89 is the first integer with more than one digit that fulfills the property partially introduced in the title of this kata. What's the use of saying "Eureka"? Because this sum gives the same number.
          In effect: 89 = 8^1 + 9^2
@@ -622,7 +664,6 @@ namespace CSharpBasics
         {
             return string.Join(" ", str.Split(' ').Select(w => w.Substring(1) + w[0] + "ay"));
         }
-
         public static string PigIt1(string str)
         {
             List<string> words = new List<string>(str.Split(' '));
@@ -683,7 +724,6 @@ namespace CSharpBasics
             Queue<int> odds = new Queue<int>(array.Where(e => e % 2 == 1).OrderBy(e => e));
             return array.Select(e => e % 2 == 1 ? odds.Dequeue() : e).ToArray();
         }
-
         public static int[] SortArray1(int[] array)
         {
             // find the position of all odd numbers in the array => position[]
@@ -724,7 +764,6 @@ namespace CSharpBasics
             // Good luck!    
             return names.Where(name => name.Length == 4);
         }
-
         public static IEnumerable<string> FriendOrFoe1(string[] names)
         {
             List<string> friends = new List<string>();
@@ -737,7 +776,8 @@ namespace CSharpBasics
             return friends;
         }
 
-        /*  Return the number (count) of vowels in the given string.
+        /*  
+         *  Return the number (count) of vowels in the given string.
             We will consider a, e, i, o, u as vowels for this Kata (but not y).
             The input string will only consist of lower case letters and/or spaces.
          */
@@ -745,7 +785,6 @@ namespace CSharpBasics
         {
             return str.Count(i => "aeiou".Contains(i));
         }
-
         public static int GetVowelCount1(string str)
         {
             int vowelCount = 0;
@@ -758,7 +797,6 @@ namespace CSharpBasics
             }
             return vowelCount;
         }
-
         public static int GetVowelCount2(string str)
         {
             int vowelCount = 0;
