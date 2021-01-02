@@ -10,7 +10,7 @@ public class MergeNames
         newNames1.AddRange(names2.ToList());
         return newNames1.Distinct().ToArray();
     }
-    public static void Main(string[] args)
+    public static void Main3(string[] args)
     {
         string[] names1 = new string[] { "Ava", "Emma", "Olivia" };
         string[] names2 = new string[] { "Olivia", "Sophia", "Emma" };
