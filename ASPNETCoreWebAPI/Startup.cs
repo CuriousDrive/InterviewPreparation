@@ -1,3 +1,4 @@
+using ASPNETCoreWebAPI.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,9 @@ namespace ASPNETCoreWebAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ASPNETCoreWebAPI", Version = "v1" });
             });
+            services.AddDbContext<BookStoresDBContext>();
+            services.AddControllersWithViews()
+                    .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
