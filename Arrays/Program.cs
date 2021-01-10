@@ -9,7 +9,7 @@ namespace CSharpBasics
         static void Main(string[] args)
         {
 
-            //byte, short, float, int, long, double, decimal , char, bool
+            //byte, short, float, int, long, double, decimal, char, bool
             //string
             //string[] strArray = new[] { "Pune", "Columbia", "Topeka", "Hyderabad", "Philadelphia" };
 

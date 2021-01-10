@@ -179,7 +179,7 @@ namespace CSharpBasics
             //names.AddRange(names2);
 
             //addrange strings
-            //names.ForEach(name => Console.WriteLine(name);
+            //names.ForEach(name => Console.WriteLine(name));
 
             //accessing a List
             //Console.WriteLine(names[4]);

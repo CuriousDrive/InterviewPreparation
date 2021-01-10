@@ -7,14 +7,14 @@ namespace AsyncBreakfast
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static async Task Main2(string[] args)
         {
             Console.WriteLine("SYNCHRONOUS METHOD CALLS");
-            Coffee cup = null;
-            Egg eggs = null;
-            Bacon bacon = null;
-            Toast toast = null;
-            Juice oj = null;
+            Coffee cup = new Coffee();
+            Egg eggs = new Egg();
+            Bacon bacon = new Bacon();
+            Toast toast = new Toast();
+            Juice oj = new Juice();
             //cup = PourCoffee();
             //Console.WriteLine("coffee is ready");
 
@@ -57,9 +57,9 @@ namespace AsyncBreakfast
             while (breakfastTasks.Count() > 0)
             {
                 var completedTask = await Task.WhenAny(breakfastTasks);
-
+                
                 if (completedTask == eggsTask)
-                    Console.WriteLine("eggs are ready");
+                    Console.WriteLine(eggsTask);
                 if (completedTask == baconTask)
                     Console.WriteLine("bacon is ready");
                 if (completedTask == toastTask)
@@ -220,5 +220,6 @@ namespace AsyncBreakfast
 
     internal class Egg
     {
+        public int EggId;
     }
 }
