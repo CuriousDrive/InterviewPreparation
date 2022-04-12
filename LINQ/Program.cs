@@ -8,10 +8,12 @@ namespace CSharpBasics
     {
         static void Main(string[] args)
         {
-            int[] intArray = {1,2,3,4,5,5,4,3};
-            int[] intArray2 = {1,1,1,1,1,1,1,1};
+            int[] intArray = { 1, 2, 3, 4, 5, 5, 4, 3 };
+            int[] intArray2 = { 1, 1, 1, 1, 1, 1, 1, 1 };
             string[] strArray = { "Chiplun", "Chiplun", "Hyderabad", "Topeka", "Pune", "Pune" };
-            Student[] students = {  new Student() { Score = 10, Name = "Fahad"} , 
+            Student[] students = {  new Student() { Score = 10, Name = "Fahad"} ,
+                                    new Student() { Score = 10, Name = "Fahad1"} ,
+                                    new Student() { Score = 10, Name = "Fahad2"} ,
                                     new Student() { Score = 20, Name = "Monica"},
                                     new Student() { Score = 20, Name = "Joe"}};
 
@@ -22,18 +24,18 @@ namespace CSharpBasics
             //{
             //    Console.WriteLine(item.Key + " " + item.Count());
             //}
-            
-            //grouping in custom data types
-            //var groupedStudents = students.GroupBy(s => s.Score).ToList();
 
-            //foreach(var item in groupedStudents)
-            //{
-            //    Console.WriteLine(item.Key);
-            //    foreach(var item2 in item)
+            //grouping in custom data types
+            // var groupedStudents = students.GroupBy(s => s.Score).ToList();
+
+            // foreach(var items in groupedStudents)
+            // {
+            //    Console.WriteLine(items.Key);
+            //    foreach(var item in items)
             //    {
-            //        Console.WriteLine(item2.Name + "-" + item2.Score);
+            //        Console.WriteLine(item.Name + "-" + item.Score);
             //    }
-            //}
+            // }
 
             //grouping by numbers
             //var groupedData = intArray2.GroupBy(number => number).ToList();
@@ -48,7 +50,6 @@ namespace CSharpBasics
             //var something = intArray.First();
             //something = intArray.Last();
             //Console.WriteLine(something);
-
 
             //var something = from number in intArray
             //                from city in strArray

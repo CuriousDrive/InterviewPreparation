@@ -2,12 +2,12 @@
 
 	1. Linear Search => Done
 	2. Binary Search => Done
-	3. Binary Search Tree => 
+	3. Binary Search Tree => Check Swab Interview Code
 
 Sorting Algorithms
 
 	1. Bubble Sort => Done
-	2. Selection Sort => Done
-	3. Insertion Sort =>
+	2. Insertion Sort => Done
+	3. Selection Sort => Done
 	4. Shell Sort => 
 	5. Quick Sort => 

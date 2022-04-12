@@ -17,7 +17,7 @@ namespace CSharpAlgorithms
             for(int i = 0; i < numbers.Length-1; i++)
             {
                 int min_indx = i;
-                for(int j = i +1; j < numbers.Length; j++)
+                for(int j = i + 1; j < numbers.Length; j++)
                 {
                     if (numbers[min_indx] > numbers[j])
                         min_indx = j;

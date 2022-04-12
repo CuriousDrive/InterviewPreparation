@@ -6,7 +6,7 @@ namespace CSharpAlgorithms
 {
     class InsertionSort
     {
-        static void Main()
+        static void Main2()
         {
             int[] numbers = new int[] { 33, 56, 12, 78, 23, 90, 34, 89, 45, 67, 35 };
             Console.WriteLine(String.Join(" ", Sort(numbers)));

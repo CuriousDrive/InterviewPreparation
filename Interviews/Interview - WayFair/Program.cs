@@ -20,10 +20,8 @@ n: length of the input string
 
 class Solution
 {
-
     static void Main(String[] args)
     {
-
         // 10-1+2+3
         // "10","1+2+3"
         //10 + "-1" +"2" + "3"       
@@ -38,7 +36,6 @@ class Solution
         //string expression5 = "255"; // = 255
 
         Console.WriteLine(Calculate(expression4));
-
     }
 
     public static int Calculate(string expression)
@@ -64,10 +61,6 @@ class Solution
                     result += Convert.ToInt32(sumExpression[j]);
             }
         }
-
         return result;
     }
-
-
-
 }

@@ -59,7 +59,7 @@ namespace AsyncBreakfast
                 var completedTask = await Task.WhenAny(breakfastTasks);
                 
                 if (completedTask == eggsTask)
-                    Console.WriteLine(eggsTask);
+                    Console.WriteLine("eggs are ready");
                 if (completedTask == baconTask)
                     Console.WriteLine("bacon is ready");
                 if (completedTask == toastTask)

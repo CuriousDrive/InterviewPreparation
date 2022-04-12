@@ -12,8 +12,6 @@ Areas to focus on would be the following =>
 
 
 Some notes about ActionResult and IActionResult
-IActionResults are used to send the HTTP status code back to the clietns, so that 
+IActionResults are used to send the HTTP status code back to the clients, so that 
 it is easier for clients to handle those error
 You can use ActionResult<T> to pass your objects with the response
-
-

@@ -1,5 +1,6 @@
 Single Reponsibility Principle =>
-Creating child classes such a way that we don't have to change one class for everything. The class will be changed only when there is a reason for it change.
+Creating child classes such a way that we don't have to change one class for everything. 
+The class will be changed only when there is a reason for it change.
 Creating classes for it's responsibility
 
 
@@ -19,4 +20,6 @@ If you have made more interfaces than classes than you have gone far
 
 
 Dependency Inversion Principle => 
-this is dependency injection in asp.net core. You can create abstractions for you concrete classes so that you can swap them if you needed to upgrade to another service. this helps you decouple the concrete implementation from abtractions
+This is dependency injection in asp.net core. 
+You can create abstractions for you concrete classes so that you can swap them if you needed to upgrade to another service. 
+This helps you decouple the concrete implementation from abtractions

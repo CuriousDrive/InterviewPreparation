@@ -6,7 +6,8 @@ namespace AmazonTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[,] array = new int[2,2];
+           //Console.WriteLine(value);
         }
     }
 }

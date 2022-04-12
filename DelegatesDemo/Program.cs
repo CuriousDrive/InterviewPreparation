@@ -11,12 +11,12 @@ namespace DelegatesDemo
         static void Main(string[] args)
         {
             //declaring delegates on top of class
-            //Calculate add = (x, y) => x + y;
-            //Calculate multiply = (x, y) => x * y;
+            Calculate add = Add;
+            Calculate multiply = (x, y) => x * y;
             //Calculate divide = (x, y) => x / y; ;
             //Calculate substract = (x, y) => x - y;
 
-            //Console.WriteLine(add(10,10));
+            Console.WriteLine(add(10,10));
             //Console.WriteLine(multiply(10,10));
             //Console.WriteLine(divide(10, 10));
             //Console.WriteLine(substract(10, 10));
@@ -42,8 +42,13 @@ namespace DelegatesDemo
 
             //predicate
             Predicate<int> predicate = (number) => { return number > 20 ? true : false; };
-            List<string> numbers = new List<string> { "10", "20", "5" };
-            Console.WriteLine(String.Join(" ",numbers.Select(int.Parse).ToList().FindAll(predicate).ToArray()));
+            List<int> numbers = new List<int> { 10, 20, 5 };
+            Console.WriteLine(String.Join(" ",numbers.FindAll(predicate)));
+        }
+
+        public static int Add(int x, int y)
+        {
+            return x + y;
         }
     }
 }
