@@ -5,7 +5,6 @@ using System.Linq;
 
 namespace CSharpBasics
 {
-
     class Student
     {
         public string Name { get; set; }
@@ -18,7 +17,7 @@ namespace CSharpBasics
         {
             string[] names1 = new[] { "Fahad", "Adam", "Mullaji" };
             string[] names2 = new[] { "Monica", "Kendra", "Mullaji" };
-            int[] numbers = { 11, 12, 13, 14, 15};
+            int[] numbers = { 15, 77, 4, 14, 3};
             string[] stringNumbers = { "11", "12", "13", "14", "15"};
             Student[] students = {  new Student() { Score = 10, Name = "Fahad"} ,
                                     new Student() { Score = 20, Name = "Monica"},
@@ -27,61 +26,59 @@ namespace CSharpBasics
             numbers.ToList().Select(n => n.ToString()).ToList();
             List<int> intNumbers = stringNumbers.Select(int.Parse).ToList();
 
-            //-------------------- Linked List --------------------
-
-
-            //-------------------- Linked List --------------------
-
-
             //-------------------- Stack --------------------
             Stack<string> languages = new Stack<string>();
             languages.Push("C#");
             languages.Push("JavaScript");
             languages.Push("Java");
-            languages.Push("python");
+            languages.Push("Python");
             languages.Push("SQL");
 
-            //if you try to pop an emty stack then it will throw an exception
-            //Console.WriteLine(languages.Pop());
-            //Console.WriteLine(languages.Pop());
-            //Console.WriteLine(languages.Pop());
-            //Console.WriteLine(languages.Pop());
-            //Console.WriteLine(languages.Pop());
+            //if you try to pop items out of a stack after all the items are popped then it will throw an exception
+            // Console.WriteLine(languages.Pop());
+            // Console.WriteLine(languages.Pop());
+            // Console.WriteLine(languages.Pop());
+            // Console.WriteLine(languages.Pop());
+            // Console.WriteLine(languages.Pop());
 
-            //this will throw an exception if you try to peek an empty stack
-            //Console.WriteLine(languages.Peek());
-            //Console.WriteLine(languages.Peek());
-            //Console.WriteLine(languages.Peek());
-            //Console.WriteLine(languages.Peek());
+            // this will throw an exception if you try to peek an empty stack
+            // Console.WriteLine(languages.Peek());
+            // Console.WriteLine(languages.Peek());
+            // Console.WriteLine(languages.Peek());
+            // Console.WriteLine(languages.Peek());
 
-            //languages.Prepend("Bash");
-            //Console.WriteLine(languages.Pop());
-            //Console.WriteLine(languages.Pop());
-            //Console.WriteLine(languages.Pop());
-            //Console.WriteLine(languages.Pop());
-            //Console.WriteLine(languages.Pop());
+            //var newLangs = languages.Prepend("Bash");
+
+            // Console.WriteLine(newLangs.Count());
+            //languages.TryPop();
+
+            // Console.WriteLine(languages.Pop());
+            // Console.WriteLine(languages.Pop());
+            // Console.WriteLine(languages.Pop());
+            // Console.WriteLine(languages.Pop());
+            // Console.WriteLine(languages.Pop());
             //Console.WriteLine(languages.Pop());
 
             //-------------------- Queue --------------------
             // => Fahad Mark Monica Tanvi Joe Erin Shayna Moo
             Queue<string> line = new Queue<string>();
-            //line.Enqueue("Fahad");
-            //line.Enqueue("Mark");
-            ////dequeue method removed the first element in the queue to be removed
-            ////Console.WriteLine(line.Dequeue());
-            //line.Enqueue("Monica");
-            //line.Enqueue("Tanvi");
-            ////Console.WriteLine(line.Dequeue());
-            //line.Enqueue("Erin");
-            //line.Enqueue("Shayna");
-            ////Console.WriteLine(line.Dequeue());
-            //line.Enqueue("Joe");
-            //line.Enqueue("Moo");
+            line.Enqueue("Fahad");
+            line.Enqueue("Mark");
+            //dequeue method removed the first element in the queue to be removed
+            //Console.WriteLine(line.Dequeue());
+            line.Enqueue("Monica");
+            line.Enqueue("Tanvi");
+            //Console.WriteLine(line.Dequeue());
+            line.Enqueue("Erin");
+            line.Enqueue("Shayna");
+            //Console.WriteLine(line.Dequeue());
+            line.Enqueue("Joe");
+            line.Enqueue("Moo");
 
             //peek let's you look at the first element but it does not remove the element
-            //Console.WriteLine(line.Peek());
-            //Console.WriteLine(line.Peek());
-            //Console.WriteLine(line.Peek());
+            // Console.WriteLine(line.Peek());
+            // Console.WriteLine(line.Peek());
+            // Console.WriteLine(line.Peek());
 
             //if tried to dequeue when there are no items then you will get an exception
             //Console.WriteLine(line.Dequeue());
@@ -105,25 +102,9 @@ namespace CSharpBasics
             //you can convert your queue into a list and work on it
             //line.ToList().ForEach(s => Console.WriteLine(s));
 
-            //-------------------- SORTED LIST --------------------
-            //let's try with numbers first
-            //not sure when I can use this why not just sort the existing list?
-            //SortedList sortedList = new SortedList();
-            //int index = 0;
-            //for(int i = numbers.Length-1; i >= 0; i--)
-            //{
-            //    sortedList.Add(i,numbers[index]);
-            //    index++;
-            //}
-
-            //foreach (var item in sortedList)
-            //{
-            //    DictionaryEntry dictionaryEntry = (DictionaryEntry)item;
-            //    Console.WriteLine(dictionaryEntry.Key + " " + dictionaryEntry.Value);
-            //}
-
             //-------------------- ARRAY LIST --------------------
-            // array list is like array but array list is dynamic
+            
+            // Array list is like array but array list is dynamic
             // you can add and remove items from the list
             // also you can push any type of item at run time
             //var arrayList = new ArrayList();
@@ -165,40 +146,94 @@ namespace CSharpBasics
             //foreach (var item in arrayList)
             //    Console.Write(item);
 
-            /*  -------------------- LIST<T> --------------------
-                List<T> equivalent of the ArrayList, which implements IList<T>.
-                It comes under System.Collection.Generic namespace.
-                List<T> can contain elements of the specified type. It provides compile-time type checking and doesn't perform boxing-unboxing because it is generic.
-                Elements can be added using the Add(), AddRange() methods or collection-initializer syntax.
-                Elements can be accessed by passing an index e.g. myList[0]. Indexes start from zero.
-                List<T> performs faster and less error-prone than the ArrayList.
-            */
+            //-------------------- DICTIONATY --------------------
 
-            //var names = new List<string>();
-            //names.AddRange(names1);
-            //names.AddRange(names2);
+            // Dictionary<int, string> rollNumberAndName = new Dictionary<int, string>();
 
-            //addrange strings
-            //names.ForEach(name => Console.WriteLine(name));
+            // rollNumberAndName.Add(1, "Fahad");
+            // rollNumberAndName.Add(2, "Monica");
+            // rollNumberAndName.Add(3, "Mark");
+            
+            // rollNumberAndName[1] = "Tanvi";
 
-            //accessing a List
-            //Console.WriteLine(names[4]);
+            // Console.WriteLine(rollNumberAndName[1]);
 
-            //accessing a list using LINQ
-            //var values = (from name in names
-            //                where name.length > 5
-            //                orderby name
-            //                select name).tolist();
+            // var list = rollNumberAndName.Select(x => x.Key).ToList();
 
-            //names.Clear();
-            //Console.WriteLine(names.BinarySearch("Mullaji"));
-            //names.ForEach(name => Console.WriteLine(name));
+            
+            //-------------------- TUPLES --------------------
 
-            //Console.WriteLine(names.Find(name => name.Contains("M"))); 
+            // List<(int, double)> listValues =  new List<(int, double)>();
 
-            //names.Sort();
-            //names.ForEach(name => Console.WriteLine(name));
+            // (int value1, int value2) values = (1,2);
 
+            // listValues.Add((10,10));
+            // listValues.Add((10,20));
+            // listValues.Add((10,30));
+            // listValues.Add((10,40));
+
+            // foreach (var item in listValues)
+            // {
+            //     Console.WriteLine(item.Item1 + ":" + item.Item2);
+            // }
+
+            //-------------------- SORTED LIST --------------------
+            
+            // let's try with numbers first
+            // the keys gets sorted as the numbers are inserted into the 
+            
+            // SortedList sortedList = new SortedList();
+            // Console.WriteLine("---- Unsorted List ----");
+            
+            // for(int i = 0; i < numbers.Length; i++)
+            // {
+            //     Console.WriteLine(numbers[i]);
+            //     sortedList.Add(numbers[i], i);
+            // }
+
+            // Console.WriteLine("---- Sorted List ----");
+            // foreach(var item in sortedList.Keys)
+            // {
+            //     Console.WriteLine(item);
+            // }
+
+            // this will throw an exception
+            // sortedList.Add(15,99);
+
+            //-------------------- HASHTABLE --------------------
+
+            // Hashtable numberNames = new Hashtable();
+            
+            // numberNames.Add(1,"One"); //adding a key/value using the Add() method
+            // numberNames.Add(2,"Two");
+            // numberNames.Add(3,"Three");
+
+            // foreach(DictionaryEntry item in numberNames)
+            // {
+            //     Console.WriteLine(item.Key + ":" + item.Value);
+            // }
+
+            //-------------------- HASHSET --------------------
+
+            // HashSet<int> hs = new HashSet<int>();
+
+            // hs.Add(1);
+            // hs.Add(3);
+            // hs.Add(5);
+            // hs.Add(7);
+            // hs.Add(9);
+
+            // Console.WriteLine(String.Join('\n', hs));
+        }
+
+        // Tuples as method parameters and return types
+        static Tuple<int, string, string> DisplayTuple(Tuple<int,string,string> person)
+        {
+            Console.WriteLine($"Id = { person.Item1}");
+            Console.WriteLine($"First Name = { person.Item2}");
+            Console.WriteLine($"Last Name = { person.Item3}");
+
+            return Tuple.Create(1, "Bill", "Gates");
         }
     }
 }

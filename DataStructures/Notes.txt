@@ -1,5 +1,3 @@
------- Data Structures ----
-
 Stack 
     -> Push
     -> Pop
@@ -39,15 +37,6 @@ Hashtable
     -> Values can be accessed by passing associated key in the indexer e.g. myHashtable[key]
     -> Elements are stored as DictionaryEntry objects.
 
-Tuples
-    -> (double, int) t1 = (4.5, 3);
-    -> (double Sum, int Count) t2 = (4.5, 3);
-    -> var t = (Sum: 4.5, Count: 3);
-    -> t3 = t2;
-
------- Numbers ----
-
-The Decimal, Double, and Float variable types are different in the way that they store the values. 
-Precision is the main difference where float is a single precision (32 bit) floating point data type, 
-double is a double precision (64 bit) floating point data type 
-and decimal is a 128-bit floating point data type.
+Hashset
+    -> HashSet<T> is an unordered collection of the unique elements
+    -> It has linq functions

@@ -15,13 +15,23 @@ namespace CSharpBasics
 
             int[] intArray1 = new[] { 6, 23, 3, 44, 53, 4, 71, 8 };
             string[] strArray1 = { "sir_yawnston","CodeWithSean", "CuriousDrive" ,"tbdgamer" };
+            
+            for(int i = 0; i < strArray1.Length; i++)
+            {
+                if(i != strArray1.Length-1)
+                {
+                    strArray1[i+1] += 'c';
+                }
+                Console.WriteLine(strArray1[i]);
+            }
+
 
             //Array.Sort(strArray1);
-            string[] results = strArray1.Reverse().ToArray();
-            foreach (var item in results)
-            {
-                Console.WriteLine(item);
-            }
+            // string[] results = strArray1.Reverse().ToArray();
+            // foreach (var item in results)
+            // {
+            //     Console.WriteLine(item);
+            // }
 
             //NOTES
             // Add below namespaces to use LINQ extension methods
