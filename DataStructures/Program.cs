@@ -202,16 +202,16 @@ namespace CSharpBasics
 
             //-------------------- HASHTABLE --------------------
 
-            // Hashtable numberNames = new Hashtable();
+            Hashtable numberNames = new Hashtable();
             
-            // numberNames.Add(1,"One"); //adding a key/value using the Add() method
-            // numberNames.Add(2,"Two");
-            // numberNames.Add(3,"Three");
+            numberNames.Add(1,"One"); //adding a key/value using the Add() method
+            numberNames.Add(2,"Two");
+            numberNames.Add(3,"Three");
 
-            // foreach(DictionaryEntry item in numberNames)
-            // {
-            //     Console.WriteLine(item.Key + ":" + item.Value);
-            // }
+            foreach(DictionaryEntry item in numberNames)
+            {
+                Console.WriteLine(item.Key + ":" + item.Value);
+            }
 
             //-------------------- HASHSET --------------------
 
