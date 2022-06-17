@@ -27,12 +27,12 @@ namespace CSharpBasics
             List<int> intNumbers = stringNumbers.Select(int.Parse).ToList();
 
             //-------------------- Stack --------------------
-            Stack<string> languages = new Stack<string>();
-            languages.Push("C#");
-            languages.Push("JavaScript");
-            languages.Push("Java");
-            languages.Push("Python");
-            languages.Push("SQL");
+            // Stack<string> languages = new Stack<string>();
+            // languages.Push("C#");
+            // languages.Push("JavaScript");
+            // languages.Push("Java");
+            // languages.Push("Python");
+            // languages.Push("SQL");
 
             //if you try to pop items out of a stack after all the items are popped then it will throw an exception
             // Console.WriteLine(languages.Pop());
@@ -227,7 +227,7 @@ namespace CSharpBasics
         }
 
         // Tuples as method parameters and return types
-        static Tuple<int, string, string> DisplayTuple(Tuple<int,string,string> person)
+        static (int, string, string) DisplayTuple((int,string,string) person)
         {
             Console.WriteLine($"Id = { person.Item1}");
             Console.WriteLine($"First Name = { person.Item2}");

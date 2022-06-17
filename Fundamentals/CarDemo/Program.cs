@@ -22,7 +22,8 @@ namespace CSharpBasics
         /*
          Properties have get and set accessors, which provide more control on how values are set or returned.
         C# allows you either to create a private field for storing the property value or 
-        use auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.
+        use auto-implemented properties that create this field automatically behind the scenes 
+        and provide the basic logic for the property procedures.
          */
 
         /*

@@ -22,10 +22,10 @@ namespace DelegatesDemo
             //Console.WriteLine(substract(10, 10));
 
             //declaring the delegate function at runtime, by using Func<>
-            //Func<int,int,int> add = (x,y) => { return x + y; };
-            //Func<int,int,int> substract = (x,y) => { return x - y; };
-            //Func<int,int,int> multiply = (x,y) => { return x * y; };
-            //Func<int,int,int> divide = (x,y) => { return x / y; };
+            Func<int,int,int> add = (x,y) => x + y;
+            Func<int,int,int> substract = (x,y) => x - y;
+            Func<int,int,int> multiply = (x,y) => x * y;
+            Func<int,int,int> divide = (x,y) => x / y;
 
             //Console.WriteLine(add(10, 13));
             //Console.WriteLine(substract(10, 13));

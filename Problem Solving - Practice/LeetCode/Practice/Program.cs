@@ -1,15 +1,24 @@
-﻿Console.WriteLine();
+﻿Console.WriteLine(LengthOfLongestSubstring("pwwkew"));
 
-int FindJudge(int n, int[][] trust) {
-
-    List<int> couldBeJudge = new List<int>();
-    List<int> personBeingTrusted = new List<int>();
-
-    for(int i = 0; i < trust.Length; i++)
+int solution(string s, string t) {
+    int totalCount = 0;
+    for(int i = 0; i < s.Length; i++)
     {
-        couldBeJudge.Add(trust[i][0]);
-        personBeingTrusted.Add(trust[i][1]);
+        if(Char.IsDigit(s[i]))
+        {
+            string newString = s.Remove(i,1);
+            if(string.Compare(newString, t) == -1)
+                totalCount++;
+        }
     }
-
-    return personBeingTrusted.Except(couldBeJudge).FirstOrDefault();
+    for(int i = 0; i < t.Length; i++)
+    {
+        if(Char.IsDigit(t[i]))
+        {
+            string newString = t.Remove(i,1);
+            if(string.Compare(s,newString) == -1)
+                totalCount++;
+        }
+    }
+    return totalCount;
 }

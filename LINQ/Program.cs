@@ -24,10 +24,9 @@ namespace CSharpBasics
                                     new Parent() { StudentId = 4, FirstName = "Denise" , LastName = "Lord"}};
 
 
-            // Using group by on string array and sorting it by descending order
+            //Using group by on string array and sorting it by descending order
             // var groupedStringArray = strArray.GroupBy(s => s)
-            //                                     .OrderByDescending(item => item.Count())
-            //                                     .ToList();
+            //                                     .OrderByDescending(item => item.Count());
 
             // foreach(var item in groupedStringArray)
             // {
